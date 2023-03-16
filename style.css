@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  text-decoration: none;
+}
+
+li,
+a,
+button {
+  font-size: 16px;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 3%;
+  margin: 1rem 1rem;
+}
+nav {
+  order: 2;
+}
+
+.search input {
+  width: 250px;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 1rem;
+}
+
+.search {
+  display: flex;
+}
+
+.search h3 {
+  padding-right: 1rem;
+}
+
+main {
+  display: flex;
+  max-width: 1400px;
+  margin: 3rem auto;
+}
+
+main .content {
+  flex: 3;
+}
+
+main img {
+  width: 1050px;
+  /* border-radius: 10px; */
+}
+
+main .content .content-1 {
+  margin-top: 5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+main .content .content-1 img {
+  height: 150px;
+  width: 250px;
+}
+main .content .content-1 h4 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.content h3 {
+  text-align: center;
+  margin-top: 5rem;
+}
+main .content .content-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+main .content .content-2 img {
+  height: 200px;
+  width: 300px;
+  margin-top: 3rem;
+}
+
+main .sidebar {
+  margin-left: 20px;
+  padding: 5px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+main .sidebar h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main .sidebar p {
+  text-align: justify;
+  margin-top: 20px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(157, 157, 158);
+  box-sizing: border-box;
+  padding: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+footer .footer-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-1 .sosmed {
+  padding-top: 10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer-1 .sosmed img {
+  height: 30px;
+}
