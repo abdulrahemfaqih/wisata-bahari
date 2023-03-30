@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <img src="Images/logo bahari lamongan.png" alt="" />
+    <header >
+      <div class="pic-logo">
+        <img src="Images/logo bahari lamongan.png" class="logo">
+      </div>
       <nav>
         <ul class="nav-links">
           <li><a href="home.html">Home</a></li>
@@ -21,13 +23,16 @@
         </ul>
       </nav>
       <div class="search">
-        <h3>Search</h3>
-        <input type="text" name="search" />
+        <form action="" id="cari" onsubmit="cariHargaTiket(event)">
+          <h3>Search</h3>
+          <input type="text" name="search" placeholder="wahana wbl..." id="search">
+          <input  id="submit" type="submit" value="submit">
+        </form>
       </div>
     </header>
     <main>
       <div class="content">
-        <a href=""><img src="Images/main-foto.png" alt=""></a>
+        <a href=""><img src="Images/main-foto.png" onmouseover="mouseOver()" onmouseout="mouseOut()" class="pic-main"></a>
         <div class="content-1">
           <div class="jam-operasional">
             <h4>Jam jam-operasional</h4>
@@ -52,12 +57,10 @@
           <img src="Images/fasility-6.jpg" alt="">
         </div>
       </div>
-      <div class="sidebar">
+      <div class="sidebar" id="samping">
         <h4>Deskripsi</h4>
-        <p>WBL atau singkatan dari Wisata Bahari Lamongan adalah sebuah destinasi yang penuh keindahan, tempat wisata ini berlokasi di wilayah Kecamatan Paciran, dikelilingi dengan pantainya yang indah , pemandangan yang luar biasa, juga fasilitas yang tidak kalah kerennya dengan yang biasa kita temui di televisi.</p>
-        <p>WISATA BAHARI LAMONGAN (WBL) Wisata Bahari Lamongan merupakan wisata yang terpopuler di Lamongan. Letaknya adalah di Jl. Raya Paciran, Paciran, Kec. Paciran, Kabupaten Lamongan, Jawa Timur. Wisata Bahari Lamongan ini diresmikan pada tanggal 14 November 2004 oleh H. Masyfuk yang ketika itu menjabat sebagai Bupati Lamongan. Wisatawan sangat direkomendasikan mengunjungi WBL. Sarana hiburan yang cocok bagi pasangan maupun keluarga dengan berbagai fasilitas, wahana, dan pemandangan pantai yang ditawarkan menambah nilai plus wisata ini. WBL selalu mengupdate wahana, fasilitas, dan system yang ada guna memanjakan dan mempermuda wisatawan. WBL juga satu komplek dengan Goa Maharani sehingga wisatawan dapat mengambil satu paket liburan keluarga atau hanya memilih salah satu.</p>
-
-  
+        <p id="desc">WBL atau singkatan dari Wisata Bahari Lamongan adalah sebuah destinasi yang penuh keindahan, tempat wisata ini berlokasi di wilayah Kecamatan Paciran, dikelilingi dengan pantainya yang indah , pemandangan yang luar biasa, juga fasilitas yang tidak kalah kerennya dengan yang biasa kita temui di televisi.</p>
+        <p  id="desc">WISATA BAHARI LAMONGAN (WBL) Wisata Bahari Lamongan merupakan wisata yang terpopuler di Lamongan. Letaknya adalah di Jl. Raya Paciran, Paciran, Kec. Paciran, Kabupaten Lamongan, Jawa Timur. Wisata Bahari Lamongan ini diresmikan pada tanggal 14 November 2004 oleh H. Masyfuk yang ketika itu menjabat sebagai Bupati Lamongan. Wisatawan sangat direkomendasikan mengunjungi WBL. Sarana hiburan yang cocok bagi pasangan maupun keluarga dengan berbagai fasilitas, wahana, dan pemandangan pantai yang ditawarkan menambah nilai plus wisata ini. WBL selalu mengupdate wahana, fasilitas, dan system yang ada guna memanjakan dan mempermuda wisatawan. WBL juga satu komplek dengan Goa Maharani sehingga wisatawan dapat mengambil satu paket liburan keluarga atau hanya memilih salah satu.</p>
       </div>
     </main>
     <footer>
@@ -72,5 +75,23 @@
         <p>alamat : jl raya paciran, kecamatan paciran, kabupaten lamongan, Jawa Timur</p>
         <p>Telepon :  (031) XXXX-XXXX</p>
     </footer>
+    <script>
+      function mouseOver() {
+      document.getElementById("samping").style.color = "blue";
+      }
+
+      function mouseOut() {
+        document.getElementById("samping").style.color = "black";
+      }
+      function cariHargaTiket(event) {
+        event.preventDefault(); // Mencegah form submit secara default
+  
+        var kataKunci = "wbl harga tikel"; // Default kata kunci
+        
+        // Kirim data ke Google dengan membuka halaman pencarian di tab baru
+        var url = "https://www.google.com/search?q=" + encodeURIComponent(kataKunci);
+        window.open(url, "_blank");
+      }     
+    </script>
   </body>
 </html>
