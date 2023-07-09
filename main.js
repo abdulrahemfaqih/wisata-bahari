@@ -56,7 +56,7 @@ menuToggle.addEventListener("click", function () {
 const segera1 = document.querySelector(".segera1");
 const segera2 = document.querySelector(".segera2");
 
-const target = new Date("12 juli, 2023 07:00:00").getTime();
+const target = new Date("20 juli, 2023 07:00:00").getTime();
 const countdown = setInterval(function () {
   const now = new Date().getTime();
   let selisih = target - now;
