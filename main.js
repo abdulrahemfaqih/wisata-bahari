@@ -55,7 +55,7 @@ menuToggle.addEventListener("click", function () {
   nav.classList.toggle("slide");
 });
 
-const target = new Date ('may, 30 2023 15:18:00').getTime();
+const target = new Date ('july, 30 2023 15:18:00').getTime();
 const countdown = setInterval(function(){
     const now = new Date().getTime();
     let selisih = target - now
