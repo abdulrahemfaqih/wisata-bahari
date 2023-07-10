@@ -5,7 +5,7 @@ function mouseOut() {
   document.getElementById("deskripsi").style.color = "black";
 }
 function cariHargaTiket(event) {
-  event.preventDefault();
+  event.preventDefault(); 
 
   let kataKunci = "wbl harga tikel"; // Default kata kunci
 
@@ -13,7 +13,7 @@ function cariHargaTiket(event) {
   window.open(url, "_blank");
 }
 let slideIndex = 1;
-showSlides(slideIndex);
+  showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides((slideIndex += n));
@@ -49,37 +49,37 @@ function showSlides(n) {
 const menuToggle = document.querySelector(".menu-toggle input");
 const nav = document.querySelector("nav ul");
 
+
+
 menuToggle.addEventListener("click", function () {
   nav.classList.toggle("slide");
 });
 
-const segera1 = document.querySelector(".segera1");
-const segera2 = document.querySelector(".segera2");
+const target = new Date ('may, 30 2023 15:18:00').getTime();
+const countdown = setInterval(function(){
+    const now = new Date().getTime();
+    let selisih = target - now
+    let hari = Math.floor( selisih / (1000 * 60 * 60 * 24));
+    let jam = Math.floor( selisih % (1000 * 60 * 60 * 24) / (1000*60*60));
+    let menit = Math.floor( selisih % (1000 * 60 * 60 ) / (1000*60));
+    let detik = Math.floor( selisih % (1000 * 60 ) / (1000));
 
-const target = new Date("20 juli, 2023 07:00:00").getTime();
-const countdown = setInterval(function () {
-  const now = new Date().getTime();
-  let selisih = target - now;
-  let hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
-  let jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
-  let detik = Math.floor((selisih % (1000 * 60)) / 1000);
+    const text = document.getElementById('waktu1')
+    const text1 = document.getElementById('waktu2')
 
-  const text = document.getElementById("waktu1");
-  const text1 = document.getElementById("waktu2");
 
-  text.innerHTML = `Segera!!<br>${hari} hari ${jam} jam ${menit} menit ${detik} detik`;
-  text1.innerHTML = `Segera!!<br>${hari} hari ${jam} jam ${menit} menit ${detik} detik`;
-  text.style.textAlign = "center";
-  text1.style.textAlign = "center";
+    text.innerHTML = `${hari} hari ${jam} jam ${menit} menit ${detik} detik`
+    text1.innerHTML = `${hari} hari ${jam} jam ${menit} menit ${detik} detik`
+    
 
-  if (selisih <= 0) {
-    clearInterval(countdown);
-    text.innerHTML = "Expired!!!";
-    text1.innerHTML = "Expired!!!";
-  }
+    if(selisih <= 0){
+        clearInterval(countdown)
+        text.innerHTML = "Expired!!!";
+    }
 }, 1000);
 
+
+/*SECTION CONTACT*/
 let weather = {
   apiKey: "8358a65c0c938f7a2daccfd2d01c403d",
   fetchWeather: function (city) {
@@ -99,54 +99,84 @@ let weather = {
       .then((data) => this.displayWeather(data));
   },
   displayWeather: function (data) {
+  
     const { icon, description } = data.weather[0];
-    const { temp } = data.main;
+    const { temp} = data.main;
     const { speed } = data.wind;
     document.querySelector(".icon").src =
       "https://openweathermap.org/img/wn/" + icon + ".png";
-    document.querySelector(".ket-cuaca").innerText = description;
+    document.querySelector(".description").innerText = description;
     document.querySelector(".temp").innerText = temp + "°C";
     document.querySelector(".wind").innerText =
       "Wind speed: " + speed + " km/h";
   },
 };
 
-weather.fetchWeather("lamongan");
+weather.fetchWeather("Lamongan");
 
-// Get all the images
-const images = document.querySelectorAll(".container-gallery img");
 
-// Create the popup element
-const popup = document.createElement("div");
-popup.classList.add("popup");
-document.body.appendChild(popup);
+// SECTION GALLERY
 
-// Open the popup and show the selected image with animation
-function openPopup(image) {
-  const popupImage = document.createElement("img");
-  popupImage.setAttribute("src", image.getAttribute("src"));
-  popup.appendChild(popupImage);
-  popup.classList.add("visible");
-  document.body.style.overflow = "hidden";
-}
+const galleryPict = document.getElementsByClassName("image");
+const lightboxContainer = document.createElement("div");
+const lightboxContent = document.createElement("div");
+const lightboxImg = document.createElement("img");
+const lightboxPrev = document.createElement("div");
+const lightboxNext = document.createElement("div");
 
-// Close the popup and remove the image with animation
-function closePopup() {
-  popup.classList.remove("visible");
-  document.body.style.overflow = "auto";
-  popup.innerHTML = "";
-}
+lightboxContainer.classList.add("lightbox");
+lightboxContent.classList.add("lightbox-content");
+lightboxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
+lightboxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
 
-// Add click event listener to each image
-images.forEach((image) => {
-  image.addEventListener("click", () => {
-    openPopup(image);
-  });
-});
+lightboxContainer.appendChild(lightboxContent);
+lightboxContent.appendChild(lightboxImg);
+lightboxContent.appendChild(lightboxPrev);
+lightboxContent.appendChild(lightboxNext);
+document.body.appendChild(lightboxContainer);
 
-// Close the popup when clicked outside of it
-popup.addEventListener("click", (event) => {
-  if (event.target === popup) {
-    closePopup();
+let ind = 1;
+
+function displayLightbox(n) {
+  if (n > galleryPict.length) {
+    ind = 1;
+  } else if (n < 1) {
+    ind = galleryPict.length;
   }
-});
+  let ImgLocation = galleryPict[ind-1].children[0].getAttribute("src");
+  lightboxImg.setAttribute("src", ImgLocation);
+};
+
+function currentImg() {
+  lightboxContainer.style.display = "block";
+
+  let Imgind = parseInt(this.getAttribute("data-pict"));
+  displayLightbox(ind = Imgind);
+};
+
+for (let i = 0; i < galleryPict.length; i++) {
+  galleryPict[i].addEventListener("click", currentImg);
+};
+
+function slideImg(n) {
+  displayLightbox(ind += n);
+};
+
+function prevImg() {
+  slideImg(-1);
+};
+
+function nextImg() {
+  slideImg(1);
+};
+
+lightboxPrev.addEventListener("click", prevImg);
+lightboxNext.addEventListener("click", nextImg);
+
+function closelightbox() {
+  if (this === event.target) {
+    lightboxContainer.style.display = "none";
+  }
+};
+
+lightboxContainer.addEventListener("click", closelightbox);

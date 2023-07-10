@@ -1,314 +1,301 @@
 <!DOCTYPE html>
 <html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Wisata Bahari Lamongan</title>
-      <link rel="stylesheet" href="style.css" />
-      <link
-        rel="icon"
-        type="image/png"
-        href="Images/logo bahari lamongan.png"
-      />
-    </head>
-    <body>
-      <nav>
-        <div class="pic-logo">
-          <img src="Images/logo bahari lamongan.png" class="logo" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="#event-container">Event</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="search">
-          <form action="" id="cari" onsubmit="cariHargaTiket(event)">
-            <h3>Search</h3>
-            <input
-              type="text"
-              name="search"
-              placeholder="wahana wbl..."
-              id="search"
-            />
-            <input id="submit" type="submit" value="submit" />
-          </form>
-        </div>
-        <div class="menu-toggle">
-          <input type="checkbox" />
-          <span class="one"></span>
-          <span class="two"></span>
-          <span class="three"></span>
-        </div>
-      </nav>
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img src="Images/90.jpg" />
-          <div class="text1">
-            <div class="title1">WELCOME TO</div>
-            <div class="desc">WISATA BAHARI LAMONGAN</div>
-          </div>
-          <button class="btn">Detail</button>
-        </div>
-        <div class="mySlides fade">
-          <img src="Images/fasility-6.jpg" />
-          <div class="text1">
-            <div class="title1">WELCOME TO</div>
-            <div class="desc">WISATA BAHARI LAMONGAN</div>
-          </div>
-          <button class="btn">Detail</button>
-        </div>
-        <div class="mySlides fade">
-          <img src="Images/45.jpg" />
-          <div class="text1">
-            <div class="title1">WELCOME TO</div>
-            <div class="desc">WISATA BAHARI LAMONGAN</div>
-          </div>
-          <button class="btn">Detail</button>
-        </div>
+<html lang="en">
+
+</html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wisata Bahari Lamongan</title>
+  <link rel="icon" href="Images/logo bahari lamongan.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+    <div class="pic-logo">
+      <img src="Images/logo bahari lamongan.png" class="logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#event-container">Event</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="search">
+      <form action="" id="cari" onsubmit="cariHargaTiket(event)">
+        <h3>Search</h3>
+        <input type="text" name="search" placeholder="wahana wbl..." id="search">
+        <input id="submit" type="submit" value="submit">
+      </form>
+    </div>
+    <div class="menu-toggle">
+      <input type="checkbox" />
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+    </div>
+  </nav>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="Images/90.jpg">
+      <div class="text1">
+        <div class='title1'>WELCOME TO</div>
+        <div class="desc">WISATA BAHARI LAMONGAN</div>
       </div>
-      <br />
-      <div style="text-align: center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+      <button class="btn">Detail</button>
+    </div>
+    <div class="mySlides fade">
+      <img src="Images/fasility-6.jpg">
+      <div class="text1">
+        <div class='title1'>WELCOME TO</div>
+        <div class="desc">WISATA BAHARI LAMONGAN</div>
       </div>
-      <main>
-        <div class="content">
-          <a href=""
-            ><img
-              src="Images/main-foto.png"
-              id="gambar"
-              onmouseover="mouseOver()"
-              onmouseout="mouseOut()"
-              class="pic-main"
-          /></a>
-          <div class="deskripsi" id="deskripsi">
-            <h4>Deskripsi</h4>
-            <p id="desc">
-              WBL atau singkatan dari Wisata Bahari Lamongan adalah sebuah
-              destinasi yang penuh keindahan, tempat wisata ini berlokasi di
-              wilayah Kecamatan Paciran, dikelilingi dengan pantainya yang indah
-              , pemandangan yang luar biasa, juga fasilitas yang tidak kalah
-              kerennya dengan yang biasa kita temui di televisi.
-            </p>
-            <p id="desc">
-              WISATA BAHARI LAMONGAN (WBL) Wisata Bahari Lamongan merupakan
-              wisata yang terpopuler di Lamongan. Letaknya adalah di Jl. Raya
-              Paciran, Paciran, Kec. Paciran, Kabupaten Lamongan, Jawa Timur.
-              Wisata Bahari Lamongan ini diresmikan pada tanggal 14 November
-              2004 oleh H. Masyfuk yang ketika itu menjabat sebagai Bupati
-              Lamongan. Wisatawan sangat direkomendasikan mengunjungi WBL.
-              Sarana hiburan yang cocok bagi pasangan maupun keluarga dengan
-              berbagai fasilitas, wahana, dan pemandangan pantai yang ditawarkan
-              menambah nilai plus wisata ini. WBL selalu mengupdate wahana,
-              fasilitas, dan system yang ada guna memanjakan dan mempermuda
-              wisatawan. WBL juga satu komplek dengan Goa Maharani sehingga
-              wisatawan dapat mengambil satu paket liburan keluarga atau hanya
-              memilih salah satu.
-            </p>
-          </div>
-          <h3>Our Facilities</h3>
-          <div class="content-2">
-            <img src="Images/fasility-1.jpg" alt="" />
-            <img src="Images/fasility-2.jpg" alt="" />
-            <img src="Images/fasility-3.jpg" alt="" />
-            <img src="Images/fasility-4.jpg" alt="" />
-            <img src="Images/fasility-5.jpg" alt="" />
-            <img src="Images/fasility-6.jpg" alt="" />
-          </div>
-        </div>
-        <div class="sidebar">
-          <div class="jam-operasional">
-            <h4>Jam jam-operasional</h4>
-            <img src="Images/jam-operasional.jpg" alt="" />
-          </div>
-          <div class="high-season">
-            <h4>High Season</h4>
-            <img src="Images/High-season.jpg" alt="" />
-          </div>
-          <div class="reservasion">
-            <h4>Reservasion Group</h4>
-            <img src="Images/Reservasi-Group.jpg" alt="" />
-          </div>
-        </div>
-      </main>
-      <div id="event-container">
-        <div class="judul">
-          <h2>Comingsoon Event</h2>
-        </div>
-        <div class="events">
-          <div class="event-1">
-            <div class="judul-event">
-              <h3>Festival Pantai</h3>
-            </div>
-            <div class="gambar-event">
-              <img src="Images/festivalpantai.jpg" alt="event-1" />
-            </div>
-            <div class="waktu">
-              <p id="waktu1"></p>
-            </div>
-            <div class="deskripsi">
-              <p>
-                Festival Pantai di WBL menghadirkan kegembiraan dan keindahan
-                seni di tepi pantai. Pengunjung akan disuguhi pertunjukan musik,
-                tari, dan teater yang menghibur dari seniman lokal dan nasional.
-                Suasana pantai yang menakjubkan akan menjadi latar belakang
-                sempurna untuk festival yang memukau ini.
-              </p>
-            </div>
-            <button>Detail</button>
-          </div>
-          <div class="event-2">
-            <div class="judul-event">
-              <h3>Kejuaraan Selancar</h3>
-            </div>
-            <div class="gambar-event">
-              <img src="Images/selancar.jpg" alt="event-2" />
-            </div>
-            <div class="waktu">
-              <p id="waktu2"></p>
-            </div>
-            <div class="deskripsi">
-              <p>
-                Serunya peselancar berkompetisi di WBL! Kejuaraan Selancar
-                diadakan di pantai ini dan menarik peselancar dari berbagai
-                daerah. Pengunjung dapat menyaksikan kehebatan peserta yang
-                menguasai ombak dan melakukan trik-trik menakjubkan di atas
-                papan selancar.
-              </p>
-            </div>
-            <button>Detail</button>
-          </div>
-        </div>
+      <button class="btn">Detail</button>
+    </div>
+    <div class="mySlides fade">
+      <img src="Images/45.jpg">
+      <div class="text1">
+        <div class='title1'>WELCOME TO</div>
+        <div class="desc">WISATA BAHARI LAMONGAN</div>
       </div>
-      <div id="about">
-        <div class="kiri">
-          <div class="wrapper">
-            <h3>About</h3>
-            <p>
-              Wisata Bahari Lamongan is a popular coastal destination in
-              Lamongan, East Java, Indonesia. It offers a beautiful beach, water
-              rides, boat tours to Bat Island, and a seafood market. Visitors
-              can enjoy beach activities, explore marine life, and indulge in
-              delicious seafood. It's a refreshing getaway for those seeking a
-              mix of natural attractions, thrilling water rides, and culinary
-              delights.
-            </p>
-            <button style="margin: 40px 0 40px 0">Detail</button>
+      <button class="btn">Detail</button>
+    </div>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <main>
+    <div class="content">
+      <a href=""><img src="Images/main-foto.png" id="gambar" onmouseover="mouseOver()" onmouseout="mouseOut()"
+          class="pic-main"></a>
+      <div class="deskripsi" id="deskripsi">
+        <h4>Deskripsi</h4>
+        <p id="desc">WBL atau singkatan dari Wisata Bahari Lamongan adalah sebuah destinasi yang penuh keindahan, tempat
+          wisata ini berlokasi di wilayah Kecamatan Paciran, dikelilingi dengan pantainya yang indah , pemandangan yang
+          luar biasa, juga fasilitas yang tidak kalah kerennya dengan yang biasa kita temui di televisi.</p>
+        <p id="desc">WISATA BAHARI LAMONGAN (WBL) Wisata Bahari Lamongan merupakan wisata yang terpopuler di Lamongan.
+          Letaknya adalah di Jl. Raya Paciran, Paciran, Kec. Paciran, Kabupaten Lamongan, Jawa Timur. Wisata Bahari
+          Lamongan ini diresmikan pada tanggal 14 November 2004 oleh H. Masyfuk yang ketika itu menjabat sebagai Bupati
+          Lamongan. Wisatawan sangat direkomendasikan mengunjungi WBL. Sarana hiburan yang cocok bagi pasangan maupun
+          keluarga dengan berbagai fasilitas, wahana, dan pemandangan pantai yang ditawarkan menambah nilai plus wisata
+          ini. WBL selalu mengupdate wahana, fasilitas, dan system yang ada guna memanjakan dan mempermuda wisatawan.
+          WBL juga satu komplek dengan Goa Maharani sehingga wisatawan dapat mengambil satu paket liburan keluarga atau
+          hanya memilih salah satu.</p>
+      </div>
+
+      <h3>Our Facilities</h3>
+      <div class="content-2">
+        <img src="Images/fasility-1.jpg" alt="">
+        <img src="Images/fasility-2.jpg" alt="">
+        <img src="Images/fasility-3.jpg" alt="">
+        <img src="Images/fasility-4.jpg" alt="">
+        <img src="Images/fasility-5.jpg" alt="">
+        <img src="Images/fasility-6.jpg" alt="">
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="jam-operasional">
+        <h4>Jam jam-operasional</h4>
+        <img src="Images/jam-operasional.jpg" alt="" />
+      </div>
+      <div class="high-season">
+        <h4>High Season</h4>
+        <img src="Images/High-season.jpg" alt="" />
+      </div>
+      <div class="reservasion">
+        <h4>Reservasion Group</h4>
+        <img src="Images/Reservasi-Group.jpg" alt="" />
+      </div>
+    </div>
+  </main>
+  <div id="event-container">
+    <div class="judul">
+      <h2>Comingsoon Event</h2>
+    </div>
+    <div class="events">
+      <div class="event-1">
+        <div class="judul-event">
+          <h3>Festival Pantai</h3>
+        </div>
+        <div class="gambar-event">
+          <img src="Images/pantai1.jpg" alt="event-1">
+        </div>
+        <p style="text-align: center;">Segera!!</p>
+        <div class="waktu">
+          <p id="waktu1"></p>
+        </div>
+        <div class="deskripsi">
+          <p>Festival Pantai di WBL menghadirkan kegembiraan dan keindahan seni di tepi pantai. Pengunjung akan disuguhi
+            pertunjukan musik, tari, dan teater yang menghibur dari seniman lokal dan nasional. Suasana pantai yang
+            menakjubkan akan menjadi latar belakang sempurna untuk festival yang memukau ini.</p>
+        </div>
+        <button>Detail</button>
+      </div>
+      <div class="event-2">
+        <div class="judul-event">
+          <h3>Kejuaraan Selancar</h3>
+        </div>
+        <div class="gambar-event">
+          <img src="Images/selancar.jpg" alt="event-2">
+        </div>
+        <p style="text-align: center;">Segera!!</p>
+        <div class="waktu">
+          <p id="waktu2"></p>
+        </div>
+        <div class="deskripsi">
+          <p>Serunya peselancar berkompetisi di WBL! Kejuaraan Selancar diadakan di pantai ini dan menarik peselancar
+            dari berbagai daerah. Pengunjung dapat menyaksikan kehebatan peserta yang menguasai ombak dan melakukan
+            trik-trik menakjubkan di atas papan selancar.</p>
+        </div>
+        <button>Detail</button>
+      </div>
+    </div>
+  </div>
+  <div id="about">
+    <div class="kiri">
+      <div class="wrapper">
+        <h3>About</h3>
+        <p>Wisata Bahari Lamongan is a popular coastal destination in Lamongan, East Java, Indonesia. It offers a
+          beautiful beach, water rides, boat tours to Bat Island, and a seafood market. Visitors can enjoy beach
+          activities, explore marine life, and indulge in delicious seafood. It's a refreshing getaway for those seeking
+          a mix of natural attractions, thrilling water rides, and culinary delights.</p>
+        <button style="margin: 40px 0 40px 0;">Detail</button>
+      </div>
+    </div>
+    <div class="kanan"></div>
+  </div>
+  <div id="gallery">
+    <div class="title"><h1>Gallery</h1></div>
+    <div class="container">
+      <div class="image" data-pict="1">
+        <img src="Images/gl1.jpg">
+      </div>
+      <div class="image" data-pict="2">
+          <img src="Images/gl2.jpg">
+      </div>
+      <div class="image" data-pict="3">
+          <img src="Images/gl3.jpg">
+      </div>
+      <div class="image" data-pict="4">
+          <img src="Images/gl4.jpg">
+      </div>
+      <div class="image" data-pict="5">
+          <img src="Images/gl5.jpg">
+      </div>
+      <div class="image" data-pict="6">
+          <img src="Images/gl6.jpg">
+      </div>
+      <div class="image" data-pict="7">
+          <img src="Images/gl7.jpg">
+      </div>
+      <div class="image" data-pict="8">
+          <img src="Images/gl8.jpg">
+      </div>
+      <div class="image" data-pict="9">
+          <img src="Images/gl9.jpg">
+      </div>
+      <div class="image" data-pict="10">
+          <img src="Images/gl10.jpg">
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="contact">
+    <div class="title">
+      <h1>Contact</h1>
+    </div>
+    <div class="content">
+      <div class="maps-container">
+        <iframe
+          class="maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253516.90516990225!2d112.05476459453128!3d-6.866423599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77c3505a57d187%3A0x1eb952764236c3c8!2sWisata%20Bahari%20Lamongan%20(WBL)!5e0!3m2!1sid!2sid!4v1685174014469!5m2!1sid!2sid"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="contact-desc">
+        <div class="kbs">
+          <div class="title">
+            <h3 style="font-weight: 600;">KBS Saat Ini</h3>
+          </div>
+          <div class="ket">
+            <div class="cuaca">
+              <h3>Cuaca</h3> 
+              <p class="description"> </p> 
+            </div>
+            <div class="suhu">
+              <h3>Suhu</h3>
+              <p class="temp"> </p>
+            </div>
+            <div class="angin">
+              <h3>Kecepatan angin</h3>
+              <p class="wind"> </p>
+            </div>
+          </div>
+          <div class="logo">
+            <img src="" alt="weither logo" class="icon">
           </div>
         </div>
-        <div class="kanan"></div>
-      </div>
-      <div id="gallery">
-        <div class="title"><h1>Gallery</h1></div>
-        <div class="container-gallery">
-          <img src="Images/fasility-1.jpg" alt="">
-          <img src="Images/fasility-2.jpg" alt="">
-          <img src="Images/fasility-3.jpg" alt="">
-          <img src="Images/fasility-4.jpg" alt="">
-          <img src="Images/fasility-5.jpg" alt="">
-          <img src="Images/fasility-6.jpg" alt="">
-          <img src="Images/bgwbl.jpg" alt="">
-          <img src="Images/logo bahari lamongan.png" alt="">
-          <img src="Images//Reservasi-Group.jpg" alt="">
-          <img src="Images/jam-operasional.jpg" alt="">
-        </div>
-      </div>
-      <div id="contact">
-        <div class="title">
-          <h1>Contact</h1>
-        </div>
-        <div class="content">
-          <div class="maps-container">
-            <iframe
-              class="maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253516.90516990225!2d112.05476459453128!3d-6.866423599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77c3505a57d187%3A0x1eb952764236c3c8!2sWisata%20Bahari%20Lamongan%20(WBL)!5e0!3m2!1sid!2sid!4v1685174014469!5m2!1sid!2sid"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="contact-desc">
-            <div class="kbs">
-              <div class="title">
-                <h3 style="font-weight: 600;">KBS Saat Ini</h3>
+        <div class="contact">
+          <h3>Social Media</h3>
+          <div class="media">
+            <div class="sosmed">
+              <div class="ig">
+                <a href=""><img src="images/instagram.png" alt=""></a>
               </div>
-              <div class="ket">
-                <div class="cuaca" style="padding: 20px;">
-                  <h3>Cuaca</h3> 
-                  <p class="ket-cuaca" style="margin-top: 20px;"></p> 
-                </div>
-                <div class="suhu">
-                  <h3>Suhu</h3>
-                  <p class="temp"></p>
-                </div>
-                <div class="angin">
-                  <h3>Kec angin</h3>
-                  <p class="wind"></p>
-                </div>
+              <div class="tt">
+                <a href=""><img src="images/tik-tok.png" alt=""></a>
               </div>
-              <div class="logo">
-                <img src="" alt="weither logo" class="icon" style="width: 100px;">
+              <div class="p1">
+                <img src="images/phone.png" alt="">
+                <p>(0322)666777</p>
               </div>
-            </div>
-            <div class="contact">
-              <h3>Social Media</h3>
-              <div class="media">
-                <div class="sosmed">
-                  <div class="ig">
-                    <a href=""><img src="images/instagram.png" alt=""></a>
-                  </div>
-                  <div class="tt">
-                    <a href=""><img src="images/tik-tok.png" alt=""></a>
-                  </div>
-                  <div class="p1">
-                    <img src="images/phone.png" alt="">
-                    <p>(0322)666777</p>
-                  </div>
-                  <div class="p2">
-                    <img src="images/handphone.png" alt="">
-                    <p>087776360111</p>
-                  </div>
-                </div>
-              </div>
-              <div class="dec-alamat-waktu">
-                <div class="alamat">
-                  <h4>Alamat</h4>
-                  <p>Jl. Raya Paciran (Ex Tanjung Kodok) Po Box WBL Lamongan, Jawa Timur</p>
-                </div>
-                <div class="time">
-                  <img src="images/clock.png" alt="">
-                  <p>08.30 - 16.30</p>
-                </div>
+              <div class="p2">
+                <img src="images/handphone.png" alt="">
+                <p>087776360111</p>
               </div>
             </div>
           </div>
+          <div class="dec-alamat-waktu">
+            <div class="alamat">
+              <h4>Alamat</h4>
+              <p>Jl. Raya Paciran (Ex Tanjung Kodok) Po Box WBL Lamongan, Jawa Timur</p>
+            </div>
+            <div class="time">
+              <img src="images/clock.png" alt="">
+              <p>08.30 - 16.30</p>
+            </div>
+          </div>
         </div>
       </div>
-      <footer>
-        <div class="footer-1">
-          <h3>WISATA BAHARI LAMONGAN</h3>
-          <p>Ayo berwisata di tempat kami</p>
-          <div class="sosmed">
-            <img src="Images/twitter.svg" alt="" />
-            <img src="Images/email.svg" alt="" />
-            <img src="Images/instagram (2).svg" alt="" />
-          </div>
-          <p>
-            alamat : jl raya paciran, kecamatan paciran, kabupaten lamongan,
-            Jawa Timur
-          </p>
-          <p>Telepon : (031) XXXX-XXXX</p>
-        </div>
-      </footer>
-      <script src="main.js"></script>
-    </body>
-  </html>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <h3>WISATA BAHARI LAMONGAN</h3>
+      <p>Ayo berwisata di tempat kami</p>
+      <div class="sosmed">
+        <img src="Images/twitter.svg" alt="">
+        <img src="Images/email.svg" alt="">
+        <img src="Images/instagram (2).svg" alt="">
+      </div>
+      <p>alamat : jl raya paciran, kecamatan paciran, kabupaten lamongan, Jawa Timur</p>
+      <p>Telepon : (031) XXXX-XXXX</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
 </html>
