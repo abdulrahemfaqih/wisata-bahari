@@ -8,7 +8,9 @@
   text-decoration: none;
 }
 
-
+html {
+   scroll-behavior: smooth;
+}
 
 li,
 a,
@@ -695,7 +697,7 @@ main .sidebar img {
 
 
 
-/* 
+/*
 SECTION FOOTER */
 
 footer {
